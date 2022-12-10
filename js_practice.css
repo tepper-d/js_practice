@@ -1,0 +1,63 @@
+/*
+CIS 124: Introduction to JavaScript
+JS Practice Assignment
+    1. DOM Manipulation (read/write to the DOM)
+        [] a. read
+        [] b. write
+    2. TEXTBOXES
+        [] a. read
+        [] b. write
+        [] c. create
+    3. SELECT BOX
+        [] a. read
+        [] b. write
+        [] c. create
+    4. RADIO BUTTONS
+        [] a. read
+        [] b. write
+        [] c. create
+    5. CHECKBOXES
+        [] a. read
+        [] b. write
+        [] c. create
+    6. Create a Form and complete Forms validation (strings, characters or numbers or date validations)
+    7. Create a Form using browser validations
+Dominique Tepper, 10DEC2022 */
+
+body {
+    font-family: 'Cabin', sans-serif;
+    background-color: #BFACB5;
+    margin: 0 auto;
+    width: 600px;
+    border: 3px solid blue;
+    padding: 0 2em 1em;
+}
+
+h1 {
+    color: blue;
+}
+
+div {
+    margin-bottom: 1em;
+}
+
+label {
+    display: inline-block;
+    width: 10em;
+	text-align: right;
+	margin-right: 0.5em;
+}
+
+footer {
+    font-display: block;
+    font-size: 20px;
+    text-align: center;
+    color: #2B4570;
+    padding: 0.5px 0;
+}
+
+/*
+A9B3CE Wild Blue Yonder
+7284A8 Shadow Blue
+474954 Dark Liver
+*/
