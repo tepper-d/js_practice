@@ -59,7 +59,7 @@ label {
     margin: 10px;
 }
 
-#english, #norsk, #show-btn-active, #src-btn {
+#english, #norsk {
     background: #BFACB5;
     color: #7284A8;
     padding: 10px 20px;
@@ -68,9 +68,23 @@ label {
     font-size: 20px;
 }
 
-#english:hover, #norsk:hover, #show-btn-active:hover, #src-btn:hover {
+#show-btn-active, #src-btn {
+    background: #7284A8;
+    color: #BFACB5;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#english:hover, #norsk:hover {
     background: #7284A8;
     color: #A9B3CE;
+}
+
+#show-btn-active:hover, #src-btn:hover {
+    background: #474954;
+    color: #7284A8;
 }
 
 #src-btn a {
@@ -81,7 +95,7 @@ label {
 #src-btn a:visited, a:link:active, a:link, a:visited:active {
     text-decoration: none;
     text-align: center;
-    color: #7284A8;
+    color: #474954;
 }
 
 #src-btn a:visited:hover, a:link:active:hover, a:link:hover, a:visited:active:hover {
