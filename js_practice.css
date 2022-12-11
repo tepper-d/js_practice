@@ -49,25 +49,33 @@ label {
 	margin-right: 0.5em;
 }
 
-image {
+#season-img {
     width: 500px;
-    border-radius: 100%;
+    border-radius: 10%;
     margin: 10px;
 }
 
-#english, #norsk {
+#english, #norsk, #show-btn-active {
     background: #BFACB5;
     color: #7284A8;
     padding: 10px 20px;
     border: none;
     font-weight: bold;
+    font-size: 20px;
 }
 
-#english:hover, #norsk:hover {
+#english:hover, #norsk:hover, #show-btn-active:hover {
     background: #7284A8;
     color: #A9B3CE;
 }
 
+#show-btn {
+    background: #BFACB5;
+    margin: none;
+    padding:none;
+    text-align: center;
+    border: none;
+}
 
 
 footer {
