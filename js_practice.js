@@ -41,7 +41,27 @@ const showBtn = document.getElementById("show-btn");
 
 // error message array
 const errorMsg = [];
-const seasons = ["winter.jpg", "spring.jpg", "summer.jpg", "fall.jpg"];
+const seasons = [
+    "winter.jpg", 
+    "spring.jpg", 
+    "summer.jpg", 
+    "fall.jpg"
+];
+const sources = [
+    "https://www.pexels.com/photo/snow-covered-tree-1003124/",                  // winter
+    "https://www.pexels.com/photo/hillside-covered-with-flowers-7126070/",      // spring
+    "https://www.pexels.com/photo/blue-marine-13556776/",                       // summer
+    "https://www.pexels.com/photo/pathway-along-the-pine-trees-2310641/"        // fall
+];
+
+const photos = [
+    {name: "winter", photo: "winter.jpg", source: "https://www.pexels.com/photo/snow-covered-tree-1003124/"}, 
+    {name: "spring", photo: "spring.jpg", source: "https://www.pexels.com/photo/hillside-covered-with-flowers-7126070/"}, 
+    {name: "summer", photo: "summer.jpg", source: "https://www.pexels.com/photo/blue-marine-13556776/"}, 
+    {name: "fall", photo: "fall.jpg", source: "https://www.pexels.com/photo/pathway-along-the-pine-trees-2310641/"}
+];
+
+let quarter = 0;
 
 englishBtn.textContent = "english";
 norskBtn.textContent = "norwegian";
@@ -65,9 +85,9 @@ englishBtn.addEventListener("click", function(){
     `;
 
     radioEl.innerHTML = `
-        <label for="size">Size</label>
-        <input type="radio" name="size" id="thumbnail" value="thumbnail">Thumbnail
-        <input type="radio" name="size" id="full" value="full">Full Size
+        <label for="size">Display</label>
+        <input type="radio" name="output" id="photo" value="photo">Photo
+        <input type="radio" name="output" id="source" value="source">Source
     `;
 
     textboxEl.innerHTML = `
@@ -106,9 +126,9 @@ norskBtn.addEventListener("click", function(){
     `;
 
     radioEl.innerHTML = `
-        <label for="size">Size</label>
-        <input type="radio" name="size" id="thumbnail" value="20">Miniatyrbilde
-        <input type="radio" name="size" id="full" value="100">Full Størrelse
+        <label for="size">Vise</label>
+        <input type="radio" name="output" id="photo" value="photo">Bilde
+        <input type="radio" name="output" id="source" value="source">Kilde
     `;
 
     textboxEl.innerHTML = `
@@ -129,6 +149,7 @@ norskBtn.addEventListener("click", function(){
     
 });
 
+// GET SEASON. validates and indexes dropdown selection of seasons. Tepper, 10DEC2022.
 const getSeason = (arr) => {
     const season = parseInt(document.getElementById("season").value);
     //let season = 2;
@@ -138,8 +159,33 @@ const getSeason = (arr) => {
     }
     else {
         let i = season - 1;
+        quarter = i;
         return arr[i];
     }
+}
+
+
+
+// GET PHOTO DISPLAY. validates display options and show photo or source URL. Tepper, 10DEC2022.
+const getDisplay = () => {
+    let output = document.forms["picsForm"]["output"];
+    let i = quarter;
+    let imgsDOM = ``;
+    console.log(output);
+
+    if (output[0].checked == false && output[1].checked == false) {
+        errorMsg[errorMsg.length] = "Please select display option.";
+        console.error("no display chosen");
+    }
+    else if (output[0].checked == true) {
+        console.log("display success");
+        imgsDOM += `<img id="season-img" src="${getSeason(seasons)}">`;
+    }
+    else if (output[1].checked == true) {
+        console.log("no display chosen");
+        imgsDOM += `<p><button id="src-btn" ><a target="_blank" href="${sources[i]}">View on Pexels</a></button><p>`;
+    }
+    photoEl.innerHTML = imgsDOM;
 }
 
 const validateEntries = () => {
@@ -166,10 +212,7 @@ const validateEntries = () => {
 }
 
 const showPhoto = () =>{
-    let imgsDOM = "";
-    let arr="";
-    imgsDOM += `<img id="season-img" src="${getSeason(seasons)}">`
-    photoEl.innerHTML = imgsDOM;
+    getDisplay()
 }
 
 /* FOOTER. Tepper, 06NOV2022 *******************************************/

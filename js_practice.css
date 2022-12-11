@@ -38,6 +38,10 @@ h1, h2, h3 {
     color: #7284A8;
 }
 
+p {
+    text-align: center;
+}
+
 div {
     margin-bottom: 1em;
 }
@@ -55,7 +59,7 @@ label {
     margin: 10px;
 }
 
-#english, #norsk, #show-btn-active {
+#english, #norsk, #show-btn-active, #src-btn {
     background: #BFACB5;
     color: #7284A8;
     padding: 10px 20px;
@@ -64,7 +68,32 @@ label {
     font-size: 20px;
 }
 
-#english:hover, #norsk:hover, #show-btn-active:hover {
+#english:hover, #norsk:hover, #show-btn-active:hover, #src-btn:hover {
+    background: #7284A8;
+    color: #A9B3CE;
+}
+
+#src-btn a {
+    text-decoration: none;
+    text-align: center;
+}
+
+#src-btn a:visited, a:link:active, a:link, a:visited:active {
+    text-decoration: none;
+    text-align: center;
+    color: #7284A8;
+}
+
+#src-btn a:visited:hover, a:link:active:hover, a:link:hover, a:visited:active:hover {
+    text-decoration: none;
+    text-align: center;
+    color: #7284A8;
+}
+
+#src-btn a:visited:hover, a:link:active:hover, a:link:hover, a:visited:active:hover {
+    text-decoration: none;
+    text-align: center;
+    color: #7284A8;
     background: #7284A8;
     color: #A9B3CE;
 }
