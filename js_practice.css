@@ -26,15 +26,16 @@ Dominique Tepper, 10DEC2022 */
 
 body {
     font-family: 'Cabin', sans-serif;
+    color: #0D2C54;
     background-color: #BFACB5;
     margin: 0 auto;
     width: 600px;
-    border: 3px solid blue;
+    border: 3px solid #7284A8;
     padding: 0 2em 1em;
 }
 
-h1 {
-    color: blue;
+h1, h2, h3 {
+    color: #7284A8;
 }
 
 div {
@@ -48,11 +49,33 @@ label {
 	margin-right: 0.5em;
 }
 
+image {
+    width: 500px;
+    border-radius: 100%;
+    margin: 10px;
+}
+
+#english, #norsk {
+    background: #BFACB5;
+    color: #7284A8;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+}
+
+#english:hover, #norsk:hover {
+    background: #7284A8;
+    color: #A9B3CE;
+}
+
+
+
 footer {
+    font-family: 'Cabin', sans-serif;
     font-display: block;
     font-size: 20px;
     text-align: center;
-    color: #2B4570;
+    color: #7284A8;
     padding: 0.5px 0;
 }
 
@@ -61,3 +84,45 @@ A9B3CE Wild Blue Yonder
 7284A8 Shadow Blue
 474954 Dark Liver
 */
+
+/* DROPDOWN LANGUAGE MENU. Tepper, 10DEC2022 */
+/* .languages {
+    background-color: #BFACB5;
+    color: #4F7CAC;
+    padding: 16px;
+    font-size: 50px;
+    border: none;
+}
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #7284A8;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+  
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+} */

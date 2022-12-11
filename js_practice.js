@@ -24,6 +24,26 @@ JS Practice Assignment
     7. Create a Form using browser validations
 Dominique Tepper, 10DEC2022 */
 
+// DOM ELEMENTS
+const dropdownEl = document.getElementById("dropdown");
+const radioEl = document.getElementById("radio");
+const textboxEl = document.getElementById("textbox");
+const checkboxEl= document.getElementById("checkbox");
+const buttonEl = document.getElementById("button");
+const containerEl = document.getElementById("container");
+const languagesBtn = document.getElementById("languages");
+
+const english = [];
+const norsk = [];
+
+// LANGUAGE SELECT DROPDOWN
+languagesBtn.addEventListener("mouseover", function(){
+
+})
+
+
+
+
 /* FOOTER. Tepper, 06NOV2022 *******************************************/
 const today = new Date();
 const footerEl = document.getElementById("footer-el");
