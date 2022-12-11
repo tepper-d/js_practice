@@ -11,8 +11,6 @@ JS Practice Assignment
     7. Create a Form using browser validations
 Dominique Tepper, 10DEC2022 */
 
-//const $ = selector => document.querySelector(selector); 
-
 // DOM ELEMENTS
 const messageEl = document.getElementById("message-el")
 const dropdownEl = document.getElementById("dropdown");
@@ -39,13 +37,6 @@ const sources = [
     "https://www.pexels.com/photo/hillside-covered-with-flowers-7126070/",      // spring
     "https://www.pexels.com/photo/blue-marine-13556776/",                       // summer
     "https://www.pexels.com/photo/pathway-along-the-pine-trees-2310641/"        // fall
-];
-
-const photos = [
-    {name: "winter", photo: "winter.jpg", source: "https://www.pexels.com/photo/snow-covered-tree-1003124/"}, 
-    {name: "spring", photo: "spring.jpg", source: "https://www.pexels.com/photo/hillside-covered-with-flowers-7126070/"}, 
-    {name: "summer", photo: "summer.jpg", source: "https://www.pexels.com/photo/blue-marine-13556776/"}, 
-    {name: "fall", photo: "fall.jpg", source: "https://www.pexels.com/photo/pathway-along-the-pine-trees-2310641/"}
 ];
 
 let quarter = 0;
@@ -284,4 +275,4 @@ const studentName = "tepper-d"
 const today = new Date();
 let whatIsToday = today.toDateString();
 
-footerEl.textContent = `${studentName}, ${whatIsToday}`;
+footerEl.textContent = `${studentName}, ${whatIsToday}`; 
